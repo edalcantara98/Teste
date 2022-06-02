@@ -1,0 +1,69 @@
+from tkinter import *
+
+def soma():
+    n1 = float(entrada1.get())
+    n2 = float(entrada2.get())
+    resultado = (n1 + n2)
+
+    label["text"] = "O valor da soma é: "
+    label["text"] = label["text"] + str(resultado)
+
+def subtracao():
+    n1 = float(entrada1.get())
+    n2 = float(entrada2.get())
+    resultado = (n1 - n2)
+
+    label["text"] = "O valor da subtração é: "
+    label["text"] = label["text"] + str(resultado)
+
+def multiplicacao():
+    n1 = float(entrada1.get())
+    n2 = float(entrada2.get())
+    resultado = (n1 * n2)
+
+    label["text"] = "O valor da multiplicação é: "
+    label["text"] = label["text"] + str(resultado)
+
+def divisao():
+    n1 = float(entrada1.get())
+    n2 = float(entrada2.get())
+    resultado = (n1 / n2)
+
+    label["text"] = "O valor da divisão é: "
+    label["text"] = label["text"] + str(resultado)
+
+janela = Tk()
+janela.geometry("500x300")
+
+texto = Label(janela,text="CALCULADORA SIMPLES", font=25)
+texto.place(x=80, y=10)
+
+label = Label (janela, text=" ", font=20)
+label.place(x=180, y=120)
+
+nota1 = Label(janela, text="AValor-1", font=20)
+nota1.place(x=10, y=60)
+entrada1 = Entry(janela)
+entrada1.place(x=80, y=60, height=25)
+
+nota2 = Label(janela, text="AValor-2", font=20)
+nota2.place(x=250, y=60)
+entrada2 = Entry(janela)
+entrada2.place(x=320, y=60, height=25)
+
+
+
+botao = Button(janela, text="Soma", command=soma,font=20)
+botao.place(x=60, y=170)
+
+botao = Button(janela, text="Subtração", command=subtracao, font=20)
+botao.place(x=130, y=170)
+
+botao = Button(janela, text="Multiplicação", command=multiplicacao, font=20)
+botao.place(x=230, y=170)
+
+botao = Button(janela, text="Divisão", command=divisao, font=20)
+botao.place(x=350, y=170)
+
+
+janela.mainloop()
